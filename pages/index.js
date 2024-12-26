@@ -7,19 +7,10 @@ import path from 'path';
 import Certification from "../components/Certification";
 import Projects from "../components/Projects";
 import Education from '../components/Education'
-import Head from 'next/head'
-import {Html} from 'next/document'
 
 export default function Blog({certs,pjs}) {
     
-    return (
-    <Html lang='en'>
-      <Head>
-        <title>George's Personal Website</title>
-        <meta property="og:title" content="George's Personal Website" key="title" />
-      </Head>
-    
-      <div className="main">
+    return (<div className="main">
         <div className="content" >
           <div className="nav">
             <Link className='link' href='/'><span>George's About </span> </Link> / <Link className='link' href='/resume'> <span>Resume</span> </Link> / <Link className='link' href='/blogs'> <span>Blogs</span> </Link></div>
@@ -37,9 +28,9 @@ export default function Blog({certs,pjs}) {
                 <div className="contact-left"><span>Contacts:</span></div>
                 <div className="contact-right">
                   <Link href='https://github.com/kaungmyat999?tab=repositories'><Image src='/images/github_logo.png' width={40} height={40} alt='github_logo'/></Link>
-                  <Link href='https://www.linkedin.com/in/george-kyaw-472498298/'><Image src='/images/linkedin_logo.png'width={40} height={40} alt='linkedin_logo'/></Link>
+                  <Link href='https://www.linkedin.com/in/george-kyaw-472498298/'><Image src='/images/linkedin_logo.png' width={40} height={40} alt='linkedin_logo'/></Link>
                   <Link href='https://x.com/KaungMy51486739'><Image src='/images/TwitterX.png'width={40} height={40} alt='twitter_logo'/></Link>
-                  <Link href='kaky2698@colorado.edu'><Image src='/images/mail_icon.png'width={40} height={40} alt='email_logo' /></Link>
+                  <Link href='mailto:kaky2698@colorado.edu'><Image src='/images/mail_icon.png'width={40} height={40} alt='email_logo' /></Link>
                 </div>
               </div>
 
@@ -64,7 +55,7 @@ export default function Blog({certs,pjs}) {
         </div>
         <Footer />
       </div>
-    </Html>)
+    )
     
 }
 
