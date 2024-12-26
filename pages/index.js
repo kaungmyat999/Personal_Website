@@ -27,17 +27,17 @@ export default function Blog({certs,pjs}) {
               <div className="contact">
                 <div className="contact-left"><span>Contacts:</span></div>
                 <div className="contact-right">
-                  <Link href='https://github.com/kaungmyat999?tab=repositories'><Image src='/images/github_logo.png' width={40} height={40} alt='github_logo'/></Link>
-                  <Link href='https://www.linkedin.com/in/george-kyaw-472498298/'><Image src='/images/linkedin_logo.png' width={40} height={40} alt='linkedin_logo'/></Link>
-                  <Link href='https://x.com/KaungMy51486739'><Image src='/images/TwitterX.png'width={40} height={40} alt='twitter_logo'/></Link>
-                  <Link href='mailto:kaky2698@colorado.edu'><Image src='/images/mail_icon.png'width={40} height={40} alt='email_logo' /></Link>
+                  <Link href='https://github.com/kaungmyat999?tab=repositories' aria-label='checkout github' ><Image src='/images/github_logo.png' width={40} height={40} alt='github_logo'/></Link>
+                  <Link href='https://www.linkedin.com/in/george-kyaw-472498298/' aria-label='checkout linkedin' ><Image src='/images/linkedin_logo.png' width={40} height={40} alt='linkedin_logo'/></Link>
+                  <Link href='https://x.com/KaungMy51486739' aria-label='checkout x social media'><Image src='/images/TwitterX.png'width={40} height={40} alt='twitter_logo'/></Link>
+                  <Link href='mailto:kaky2698@colorado.edu' aria-label='checkout email'><Image src='/images/mail_icon.png'width={40} height={40} alt='email_logo' /></Link>
                 </div>
               </div>
 
               
             </div>
             <div className="right-side">
-              <Image className="profile" src='/images/IMG_1505.JPG' width={350} height={450}/>
+              <Image className="profile" src='/images/IMG_1505.JPG' alt='Profile_Pic' width={350} height={450}/>
               
             </div>
             
