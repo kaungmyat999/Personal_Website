@@ -24,8 +24,8 @@ export default function Blog({certs,pjs}) {
                 />
               </div>
               <motion.div
-                initial={{ y : -60, opacity: 0, scale: 1}}
-                animate={{ y: 0,opacity: 10, scale: 1}}
+                initial={{ y : -20, opacity: 0, scale: 1}}
+                animate={{ y: [-60,0,-5],opacity: [0,0.25,0.5,1], scale: 1}}
                 transition={{
                   duration: 0.8,
                   delay: 0.7,
@@ -50,8 +50,8 @@ export default function Blog({certs,pjs}) {
             </div>
             <div className="right-side">
               <motion.div
-                initial={{ x : 400, opacity: 0 , scale: 1 }}
-                animate={{x : [600, -80, 0],opacity: [0,0.25,0.5,1], scale: 1}}
+                initial={{ x : 200, opacity: 0 , scale: 1 }}
+                animate={{x : [40,-25, 0],opacity: [0,0.4,1], scale: 1}}
                 
                 transition={{
                   duration: 0.8,
@@ -107,7 +107,8 @@ export default function Blog({certs,pjs}) {
                 initial={{ y : -60, opacity: 0, scale: 1}}
                 
                 whileInView={{
-                  y: 0,opacity: 10, scale: 1
+                  // y: 0,opacity: 10, scale: 1
+                  y: [-60,0,-5],opacity: [0,0.25,0.5,1], scale: 1
                 }}
                 
                 transition={{
@@ -128,7 +129,7 @@ export default function Blog({certs,pjs}) {
                 initial={{ y : -60, opacity: 0, scale: 1}}
                 
                 whileInView={{
-                  y: 0,opacity: 10, scale: 1
+                  y: [-60,0,-5],opacity: [0,0.25,0.5,1], scale: 1
                 }}
                 
                 transition={{
