@@ -1,12 +1,19 @@
 {
     "projects":[
         {"name":"Customer Segmentation with Unsupervised Learning",
-        "link":"https://github.com/kaungmyat999/Unsupervised_Clustering_Customer_Segmentation"},
+        "link":"https://github.com/kaungmyat999/Unsupervised_Clustering_Customer_Segmentation",
+        "stack":["Python", "scikit-learn", "Matplotlib", "Seaborn"]},
+
         {"name":"Lung Cancer Detection (CT Image-Based)",
-        "link": "https://github.com/kaungmyat999/LUNG_CANCER_DETECTION"},
+        "link": "https://github.com/kaungmyat999/LUNG_CANCER_DETECTION",
+        "stack":["SVM", "ANN", "Random Forest", "scikit-learn", "Kaggle"]},
+
         {"name":"Personal Portfolio Project",
-        "link": "https://github.com/kaungmyat999/Personal_Website/tree/main"},
+        "link": "https://github.com/kaungmyat999/Personal_Website/tree/main",
+        "stack":["Next.js", "React.js", "Vercel", "CI/CD"]},
+
         {"name":"BBC News Classifier with Supervised and Unsupervised Models",
-        "link": "http://github.com/kaungmyat999/BBC_News_Classifier"}
+        "link": "http://github.com/kaungmyat999/BBC_News_Classifier",
+        "stack":["Python", "SVC", "K-Means", "NMF"]}
     ]
 }

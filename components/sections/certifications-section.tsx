@@ -17,11 +17,11 @@ export function CertificationsSection() {
               <div className="flex items-start justify-between">
                 <div>
                   <h3 className="font-bold">{cert.name}</h3>
-                  <p className="text-primary text-sm mt-1">Certification Provider</p>
+                  <p className="text-primary text-sm mt-1">{cert.provider}</p>
                 </div>
               </div>
               <p className="text-muted-foreground mt-4 text-sm">
-                Professional certification demonstrating expertise in the field
+                Learned end-to-end ML production workflows including deployment strategies, CI/CD pipelines, monitoring, data drift detection, and scalable infrastructure for reliable ML systems.
               </p>
             </div>
           ))}

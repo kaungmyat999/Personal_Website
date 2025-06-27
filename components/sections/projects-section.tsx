@@ -36,9 +36,9 @@ export function ProjectsSection() {
                   A brief description of this project and the technologies used to build it.
                 </p>
                 <div className="flex gap-2 mt-4">
-                  <span className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">React</span>
-                  <span className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">Next.js</span>
-                  <span className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">Tailwind</span>
+                  {project.stack.map((stackName)=>
+                    <span className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">{stackName}</span>
+                  )}
                 </div>
               </div>
             </div>
