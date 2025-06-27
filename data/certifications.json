@@ -1,9 +1,8 @@
 {
-    "certifications": [
-      {
-        "name": "Machine Learning Engineering for Production (MLOps)",
-        "path": "https://www.coursera.org/account/accomplishments/specialization/695f35b2160ab3262c0419e097e54116",
-      },
-      
-    ]
-  }
+  "certifications": [
+    {
+      "name": "Machine Learning Engineering for Production (MLOps)",
+      "path": "https://www.coursera.org/account/accomplishments/specialization/695f35b2160ab3262c0419e097e54116"
+    }
+  ]
+}
