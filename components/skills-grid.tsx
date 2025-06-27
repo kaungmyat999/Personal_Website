@@ -39,36 +39,36 @@ export function SkillsGrid() {
   const [activeCategory, setActiveCategory] = useState(0)
 
   return (
-    <div className="space-y-8">
-      {/* Category Tabs */}
-      <div className="flex flex-wrap gap-2 justify-center">
-        {skillCategories.map((category, index) => (
-          <button
-            key={category.name}
-            onClick={() => setActiveCategory(index)}
-            className={cn(
-              "flex items-center gap-2 px-4 py-2 rounded-lg transition-all",
-              "hover:text-foreground",
-              activeCategory === index ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-muted",
-            )}
-          >
-            {category.icon}
-            {category.name}
-          </button>
-        ))}
-      </div>
+      <div className="space-y-8">
+        {/* Category Tabs */}
+        <div className="flex flex-wrap gap-2 justify-center">
+          {skillCategories.map((category, index) => (
+            <button
+              key={category.name}
+              onClick={() => setActiveCategory(index)}
+              className={cn(
+                "flex items-center gap-2 px-4 py-2 rounded-lg transition-all",
+                "hover:text-foreground",
+                activeCategory === index ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-muted",
+              )}
+            >
+              {category.icon}
+              {category.name}
+            </button>
+          ))}
+        </div>
 
-      {/* Skills Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-        {skillCategories[activeCategory].skills.map((skill) => (
-          <div
-            key={skill}
-            className="bg-muted/30 border rounded-lg p-4 text-center hover:border-primary hover:bg-accent/30 transition-all duration-300"
-          >
-            <span className="font-medium">{skill}</span>
-          </div>
-        ))}
+        {/* Skills Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          {skillCategories[activeCategory].skills.map((skill) => (
+            <div
+              key={skill}
+              className="bg-muted/30 border rounded-lg p-4 text-center hover:border-primary hover:bg-accent/30 transition-all duration-300"
+            >
+              <span className="font-medium">{skill}</span>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
   )
 }

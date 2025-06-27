@@ -36,7 +36,7 @@ export function HeroSection() {
         </div>
         <div className="md:w-1/2 flex justify-end">
           <Image
-            src="/placeholder.svg?height=400&width=400"
+            src="/images/profile/profile.JPG"
             alt="Profile"
             width={400}
             height={400}

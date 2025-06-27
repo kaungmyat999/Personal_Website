@@ -8,9 +8,14 @@ import ScrollToSection from "@/components/scroll-to-section"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Your Name - Personal Website",
-  description: "Personal website and portfolio of Your Name, a web developer specializing in modern web technologies.",
-    generator: 'v0.dev'
+  title: "Kaung Myat| Machine Learning Engineer | Software Engineer",
+  description: "Personal website and portfolio of Kaung Myat, Machine Learning Engineer, Software Engineer",
+  generator: 'v0.dev',
+  icons: {
+    icon: "/atom.png",
+    shortcut: "/atom.png",
+    apple: "/atom.png",
+  }
 }
 
 export default function RootLayout({
