@@ -26,9 +26,6 @@ For contributation plz run the following command to start.
 
 
 
-```sh
+\`\`\`sh
 !npm run dev
-```
-
-
-
+\`\`\`
