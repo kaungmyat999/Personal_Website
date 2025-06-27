@@ -4,7 +4,9 @@
       {
         "name": "Machine Learning Engineering for Production (MLOps)",
         "provider":"Deep Learning.ai",
-        "path": "https://www.coursera.org/account/accomplishments/specialization/695f35b2160ab3262c0419e097e54116"}
+        "path": "https://www.coursera.org/account/accomplishments/specialization/695f35b2160ab3262c0419e097e54116",
+        "desc":"Learned end-to-end ML production workflows including deployment strategies, CI/CD pipelines, monitoring, data drift detection, and scalable infrastructure for reliable ML systems."
+      }
       
     ]
   }

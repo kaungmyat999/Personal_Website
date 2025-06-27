@@ -21,7 +21,7 @@ export function CertificationsSection() {
                 </div>
               </div>
               <p className="text-muted-foreground mt-4 text-sm">
-                Learned end-to-end ML production workflows including deployment strategies, CI/CD pipelines, monitoring, data drift detection, and scalable infrastructure for reliable ML systems.
+                {cert.desc}
               </p>
             </div>
           ))}
