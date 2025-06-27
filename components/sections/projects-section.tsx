@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import projectsData from "@/data/projects.json"
 
 export function ProjectsSection() {
   return (
@@ -10,24 +11,26 @@ export function ProjectsSection() {
           <p className="text-muted-foreground max-w-2xl mx-auto">Check out some of my recent work.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[1, 2, 3].map((project) => (
-            <div key={project} className="border rounded-lg overflow-hidden group">
+          {projectsData.projects.map((project, index) => (
+            <div key={index} className="border rounded-lg overflow-hidden group">
               <div className="relative">
                 <Image
                   src={`/placeholder.svg?height=300&width=500`}
-                  alt={`Project ${project}`}
+                  alt={project.name}
                   width={500}
                   height={300}
                   className="w-full h-48 object-cover transition-transform group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <Button variant="secondary" size="sm">
-                    View Project
+                  <Button variant="secondary" size="sm" asChild>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                      View Project
+                    </a>
                   </Button>
                 </div>
               </div>
               <div className="p-4">
-                <h3 className="font-bold text-xl">Project {project}</h3>
+                <h3 className="font-bold text-xl">{project.name}</h3>
                 <p className="text-muted-foreground mt-2">
                   A brief description of this project and the technologies used to build it.
                 </p>

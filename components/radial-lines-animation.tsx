@@ -11,7 +11,8 @@ interface Circle {
 
 export default function RadialLinesAnimation() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const { theme } = useTheme()
+  const containerRef = useRef<HTMLDivElement>(null)
+  const { theme, resolvedTheme } = useTheme()
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -22,13 +23,23 @@ export default function RadialLinesAnimation() {
 
     // Set canvas dimensions to match its display size
     const resizeCanvas = () => {
-      const { width, height } = canvas.getBoundingClientRect()
+      if (!containerRef.current) return
+
+      // Get the container dimensions
+      const containerWidth = containerRef.current.clientWidth
+      const containerHeight = containerRef.current.clientHeight
+
+      // Set canvas size to match container
+      canvas.style.width = `${containerWidth}px`
+      canvas.style.height = `${containerHeight}px`
+
+      // Set actual canvas dimensions accounting for device pixel ratio
       const dpr = window.devicePixelRatio || 1
-      canvas.width = width * dpr
-      canvas.height = height * dpr
+      canvas.width = containerWidth * dpr
+      canvas.height = containerHeight * dpr
+
+      // Scale context to account for device pixel ratio
       ctx.scale(dpr, dpr)
-      ctx.setTransform(1, 0, 0, 1, 0, 0)
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
     }
 
     resizeCanvas()
@@ -45,13 +56,35 @@ export default function RadialLinesAnimation() {
     let animationFrameId: number
 
     const drawRadialLines = () => {
-      const { width, height } = canvas.getBoundingClientRect()
-      const centerX = width / 2
-      const centerY = height / 2
-      const maxRadius = Math.min(width, height) * 0.45
+      if (!canvas || !containerRef.current) return
+
+      const containerWidth = containerRef.current.clientWidth
+      const containerHeight = containerRef.current.clientHeight
+
+      // Center coordinates
+      const centerX = containerWidth / 2
+      const centerY = containerHeight / 2
+
+      // Determine radius based on screen size - reduce multipliers to prevent overflow
+      const isMobile = window.innerWidth < 768
+      const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024
+
+      let radiusMultiplier = 0.4 // Reduced from 0.45 for desktop
+      if (isMobile) {
+        radiusMultiplier = 0.35 // Reduced from 0.8 for mobile
+      } else if (isTablet) {
+        radiusMultiplier = 0.38 // Reduced from 0.7 for tablet
+      }
+
+      const maxRadius = Math.min(containerWidth, containerHeight) * radiusMultiplier
 
       // Clear canvas
-      ctx.clearRect(0, 0, width, height)
+      ctx.clearRect(0, 0, containerWidth, containerHeight)
+
+      // Determine the current theme for line color
+      // Use resolvedTheme to get the actual theme (system preference included)
+      const currentTheme = resolvedTheme || theme
+      const lineColor = currentTheme === "dark" ? "#ffffff" : "#000000"
 
       // Update and draw each circle
       circles.forEach((circle) => {
@@ -77,7 +110,7 @@ export default function RadialLinesAnimation() {
           const endRadius = maxRadius * currentLength
 
           // Set line style - thin lines with theme-aware color
-          ctx.strokeStyle = theme === "dark" ? "#ffffff" : "#000000"
+          ctx.strokeStyle = lineColor
           ctx.lineWidth = 0.5
 
           // Draw the line from the circle's circumference
@@ -103,13 +136,11 @@ export default function RadialLinesAnimation() {
       window.removeEventListener("resize", resizeCanvas)
       cancelAnimationFrame(animationFrameId)
     }
-  }, [theme])
+  }, [theme, resolvedTheme])
 
   return (
-    <canvas
-      ref={canvasRef}
-      className="w-full h-full rounded-lg"
-      aria-label="Animated radial lines forming breathing circles"
-    />
+    <div ref={containerRef} className="w-full h-full flex items-center justify-center">
+      <canvas ref={canvasRef} className="rounded-lg" aria-label="Animated radial lines forming breathing circles" />
+    </div>
   )
 }

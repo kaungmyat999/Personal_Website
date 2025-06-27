@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
-import userProfile from  "../data/userProfile.json"
+import userProfile from "@/data/userProfile.json"
 
 export function Header() {
   return (
@@ -16,6 +16,12 @@ export function Header() {
           </Link>
           <Link href="#skills" className="text-muted-foreground hover:text-foreground transition-colors">
             Skills
+          </Link>
+          <Link href="#education" className="text-muted-foreground hover:text-foreground transition-colors">
+            Education
+          </Link>
+          <Link href="#experience" className="text-muted-foreground hover:text-foreground transition-colors">
+            Experience
           </Link>
           <Link href="#projects" className="text-muted-foreground hover:text-foreground transition-colors">
             Projects

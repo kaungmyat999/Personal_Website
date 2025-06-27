@@ -1,7 +1,7 @@
+import Link from "next/link"
 import { Github, Linkedin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import userProfile from '../../data/userProfile'
-import Link from 'next/link';
+import userProfile from "@/data/userProfile.json"
 
 export function ContactSection() {
   return (
@@ -18,15 +18,28 @@ export function ContactSection() {
             <h3 className="text-2xl font-bold">Contact Information</h3>
             <p>Feel free to reach out to me through any of the following channels:</p>
             <div className="space-y-4">
-              <Link className="flex items-center gap-3" href={"mailto:"+userProfile.email}>
+              <Link
+                href={`mailto:${userProfile.email}`}
+                className="flex items-center gap-3 hover:text-foreground transition-colors"
+              >
                 <Mail className="h-5 w-5 text-primary" />
                 <span>{userProfile.email}</span>
               </Link>
-              <Link className="flex items-center gap-3" href={userProfile.github}>
+              <Link
+                href={userProfile.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 hover:text-foreground transition-colors"
+              >
                 <Github className="h-5 w-5 text-primary" />
-                <span>{userProfile.github}</span>
+                <span>{userProfile.github.replace("https://", "")}</span>
               </Link>
-              <Link className="flex items-center gap-3" href={"https://"+userProfile.linkedin}>
+              <Link
+                href={userProfile.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 hover:text-foreground transition-colors"
+              >
                 <Linkedin className="h-5 w-5 text-primary" />
                 <span>{userProfile.linkedin}</span>
               </Link>

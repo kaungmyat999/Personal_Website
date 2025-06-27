@@ -8,8 +8,9 @@ import ScrollToSection from "@/components/scroll-to-section"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Your Name - Personal Website",
-  description: "Personal website and portfolio of Your Name, a web developer specializing in modern web technologies.",
+  title: "George Kyaw - Personal Website",
+  description:
+    "Personal website and portfolio of George Kyaw, a web developer specializing in modern web technologies.",
     generator: 'v0.dev'
 }
 
