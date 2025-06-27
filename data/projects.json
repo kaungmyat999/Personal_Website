@@ -1,12 +1,12 @@
 {
     "projects":[
-        {"name":"Unsupervised Machine Learning Project",
+        {"name":"Customer Segmentation with Unsupervised Learning",
         "link":"https://github.com/kaungmyat999/Unsupervised_Clustering_Customer_Segmentation"},
-        {"name":"Lung Cancer Detection Project",
+        {"name":"Lung Cancer Detection (CT Image-Based)",
         "link": "https://github.com/kaungmyat999/LUNG_CANCER_DETECTION"},
         {"name":"Personal Portfolio Project",
         "link": "https://github.com/kaungmyat999/Personal_Website/tree/main"},
-        {"name":"Deep Learning Project",
-        "link": "#"}
+        {"name":"BBC News Classifier with Supervised and Unsupervised Models",
+        "link": "http://github.com/kaungmyat999/BBC_News_Classifier"}
     ]
 }
