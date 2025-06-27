@@ -1,20 +1,12 @@
 {
-  "projects": [
-    {
-      "name": "Unsupervised Machine Learning Project",
-      "link": "https://github.com/kaungmyat999/Unsupervised_Clustering_Customer_Segmentation"
-    },
-    {
-      "name": "Lung Cancer Detection Project",
-      "link": "https://github.com/kaungmyat999/LUNG_CANCER_DETECTION"
-    },
-    {
-      "name": "Personal Portfolio Project",
-      "link": "https://github.com/kaungmyat999/Personal_Website/tree/main"
-    },
-    {
-      "name": "Deep Learning Project",
-      "link": "#"
-    }
-  ]
+    "projects":[
+        {"name":"Unsupervised Machine Learning Project",
+        "link":"https://github.com/kaungmyat999/Unsupervised_Clustering_Customer_Segmentation"},
+        {"name":"Lung Cancer Detection Project",
+        "link": "https://github.com/kaungmyat999/LUNG_CANCER_DETECTION"},
+        {"name":"Personal Portfolio Project",
+        "link": "https://github.com/kaungmyat999/Personal_Website/tree/main"},
+        {"name":"Deep Learning Project",
+        "link": "#"}
+    ]
 }

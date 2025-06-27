@@ -63,7 +63,7 @@ export function SkillsGrid() {
         {skillCategories[activeCategory].skills.map((skill) => (
           <div
             key={skill}
-            className="bg-muted/30 border rounded-lg p-4 text-center hover:border-primary hover:bg-accent/30 transition-all duration-300 dark:hover:border-white"
+            className="bg-muted/30 border rounded-lg p-4 text-center hover:border-primary hover:bg-accent/30 transition-all duration-300"
           >
             <span className="font-medium">{skill}</span>
           </div>

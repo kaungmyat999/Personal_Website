@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import projectsData from "@/data/projects.json"
+import projectsData from "../../data/projects.json"
+import Link from "next/link"
 
 export function ProjectsSection() {
   return (
@@ -23,9 +24,9 @@ export function ProjectsSection() {
                 />
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <Button variant="secondary" size="sm" asChild>
-                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    <Link href={project.link} target="_blank" rel="noopener noreferrer">
                       View Project
-                    </a>
+                    </Link>
                   </Button>
                 </div>
               </div>

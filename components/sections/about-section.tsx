@@ -8,11 +8,9 @@ export function AboutSection() {
           <h2 className="text-3xl md:text-4xl font-bold">About Me</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">Learn more about my background and experience.</p>
         </div>
-        <div className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
-          <div className="w-full h-[350px] sm:h-[450px] md:h-[500px] flex items-center justify-center">
-            <div className="w-full h-full">
-              <RadialLinesAnimation />
-            </div>
+        <div className="grid md:grid-cols-2 gap-8 items-start">
+          <div className="aspect-square w-full max-w-[500px] mx-auto">
+            <RadialLinesAnimation />
           </div>
           <div className="space-y-4">
             <h3 className="text-2xl font-bold">My Journey</h3>

@@ -16,14 +16,15 @@ export function EducationSection() {
             <div className="mt-4 space-y-2">
               <p>Key achievements:</p>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                <li>Graduated with Distinction</li>
-                <li>Published research paper on Deep Learning</li>
-                <li>Led student research group</li>
+                <li className='text-primary'><span className='text-red-500 font-semibold'> 4.0 GPA </span> &lt;24/30 credits completed&gt;
+</li>
+                {/* <li>Published research paper on Deep Learning</li> */}
+                
               </ul>
             </div>
           </div>
 
-          <div className="bg-background rounded-lg p-6 shadow-sm border">
+          {/* <div className="bg-background rounded-lg p-6 shadow-sm border">
             <div>
               <h3 className="text-xl font-bold">Bachelor of Engineering</h3>
               <p className="text-primary">University Name</p>
@@ -37,7 +38,7 @@ export function EducationSection() {
                 <li>Technical Club President</li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
