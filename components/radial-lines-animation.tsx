@@ -11,7 +11,7 @@ interface Circle {
 
 export default function RadialLinesAnimation() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const { theme } = useTheme()
+  const { theme, resolvedTheme } = useTheme()
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -77,7 +77,10 @@ export default function RadialLinesAnimation() {
           const endRadius = maxRadius * currentLength
 
           // Set line style - thin lines with theme-aware color
-          ctx.strokeStyle = theme === "dark" ? "#ffffff" : "#000000"
+          const isDark =
+            resolvedTheme === "dark" ||
+            (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches)
+          ctx.strokeStyle = isDark ? "#ffffff" : "#000000"
           ctx.lineWidth = 0.5
 
           // Draw the line from the circle's circumference
@@ -103,12 +106,12 @@ export default function RadialLinesAnimation() {
       window.removeEventListener("resize", resizeCanvas)
       cancelAnimationFrame(animationFrameId)
     }
-  }, [theme])
+  }, [theme, resolvedTheme])
 
   return (
     <canvas
       ref={canvasRef}
-      className="w-full h-full rounded-lg"
+      className="w-full h-full rounded-lg block mx-auto"
       aria-label="Animated radial lines forming breathing circles"
     />
   )

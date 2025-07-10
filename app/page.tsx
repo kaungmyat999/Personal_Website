@@ -2,8 +2,8 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { HeroSection } from "@/components/sections/hero-section"
 import { AboutSection } from "@/components/sections/about-section"
-import { SkillsSection } from "@/components/sections/skills-section"
 import { SkillsGridSection } from "@/components/sections/skills-grid-section"
+import { WorkExperienceSection } from "@/components/sections/work-experience-section"
 import { EducationSection } from "@/components/sections/education-section"
 import { CertificationsSection } from "@/components/sections/certifications-section"
 import { ProjectsSection } from "@/components/sections/projects-section"
@@ -17,8 +17,8 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <AboutSection />
-        {/* <SkillsSection /> */}
         <SkillsGridSection />
+        <WorkExperienceSection />
         <EducationSection />
         <CertificationsSection />
         <ProjectsSection />
