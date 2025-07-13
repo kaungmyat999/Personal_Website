@@ -75,28 +75,38 @@ export function HeroSection() {
                   Get in touch
                 </Button>
               </Link>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent"
-              >
-                <Download className="mr-2 h-4 w-4" />
-                Download CV
-              </Button>
+              <a href="/Kaung_Myat_Kyaw_Resume.pdf" className="text-muted-foreground hover:text-foreground transition-colors" download>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent"
+                >
+                  <Download className="mr-2 h-4 w-4" />
+                  Download CV
+                </Button>
+              </a>
             </div>
             <div className="flex items-center space-x-4 pt-6 md:pt-4">
-              <Button variant="ghost" size="icon" className="hover:bg-primary hover:text-primary-foreground">
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-primary hover:text-primary-foreground">
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-primary hover:text-primary-foreground">
-                <Mail className="h-5 w-5" />
-                <span className="sr-only">Email</span>
-              </Button>
+              <Link href={userProfile.github} target="_blank" rel="noopener noreferrer">
+
+                <Button variant="ghost" size="icon" className="hover:bg-primary hover:text-primary-foreground">
+                  <Github className="h-5 w-5" />
+                  
+                  <span className="sr-only">GitHub</span>
+                </Button>
+              </Link>
+              <Link href={userProfile.linkedin} target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon" className="hover:bg-primary hover:text-primary-foreground">
+                  <Linkedin className="h-5 w-5" />
+                  <span className="sr-only">LinkedIn</span>
+                </Button>
+              </Link>
+              <Link href={"mailto:"+userProfile.email}>
+                <Button variant="ghost" size="icon" className="hover:bg-primary hover:text-primary-foreground">
+                  <Mail className="h-5 w-5" />
+                  <span className="sr-only">Email</span>
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="flex items-center justify-center">
