@@ -12,7 +12,7 @@ export function Footer() {
           <Link href={userProfile.github} target="_blank" rel="noopener noreferrer">
             <Github className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
           </Link>
-          <Link href={"https://"+userProfile.linkedin} target="_blank" rel="noopener noreferrer">
+          <Link href={userProfile.linkedin} target="_blank" rel="noopener noreferrer">
             <Linkedin className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
           </Link>
           <Link href={"mailto:"+userProfile.email}>

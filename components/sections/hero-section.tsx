@@ -6,6 +6,7 @@ import Image from "next/image"
 import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
 import userProfile from "../../data/userProfile.json"
+import Link from "next/link"
 
 export function HeroSection() {
   const [displayText, setDisplayText] = useState("")
@@ -68,10 +69,12 @@ export function HeroSection() {
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                <Mail className="mr-2 h-4 w-4" />
-                Get in touch
-              </Button>
+              <Link href={"mailto:"+userProfile.email}>
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                  <Mail className="mr-2 h-4 w-4" />
+                  Get in touch
+                </Button>
+              </Link>
               <Button
                 variant="outline"
                 size="lg"

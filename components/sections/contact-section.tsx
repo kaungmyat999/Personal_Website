@@ -71,7 +71,7 @@ export function ContactSection() {
             <Card>
               <CardContent className="p-3 lg:p-4">
                 <Link
-                  href={`https://${userProfile.linkedin}`}
+                  href={userProfile.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 hover:bg-accent/50 p-3 rounded-lg transition-colors"

@@ -1,34 +1,12 @@
 {
   "workExperience": [
     {
-      "title": "Senior Software Engineer",
-      "company": "Tech Company",
-      "duration": "2022 - Present",
-      "location": "San Francisco, CA",
-      "description": "Leading development of scalable web applications using modern technologies. Mentoring junior developers and architecting solutions for complex business requirements.",
-      "technologies": ["React", "Node.js", "TypeScript", "AWS", "Docker"]
-    },
-    {
-      "title": "Full Stack Developer",
-      "company": "Startup Inc",
-      "duration": "2020 - 2022",
-      "location": "Remote",
-      "description": "Built and maintained full-stack applications from conception to deployment. Collaborated with cross-functional teams to deliver high-quality software solutions.",
-      "technologies": ["JavaScript", "Python", "PostgreSQL", "Redis", "Kubernetes"]
-    },
-    
-    {
-      "position": "Machine Learning Research Assistant",
-      "company": "University of Colorado Boulder",
-      "location": "Boulder, CO",
-      "duration": "2023 - Present",
-      "description": "Conducting research in machine learning and deep learning applications, focusing on practical implementations and real-world problem solving.",
-      "achievements": [
-        "Developed lung cancer detection model with 99% accuracy",
-        "Published research findings and methodologies",
-        "Mentored undergraduate students in ML projects"
-      ],
-      "technologies": ["Python", "PyTorch", "TensorFlow", "Scikit-learn", "AWS"]
+      "position": "Software Engineer (Volunteer)",
+      "company": "Democratic Burma",
+      "duration": "2024 - Present",
+      "location": "Washington DC",
+      "description": "Migrated the organization website from Webflow CRM to Next.js, reducing load time by 40% and improving maintainability.\nedesigned the whole UI for better accessibility and readability, increasing visitor engagement by 30%.\nBuilt a volunteer recruitment platform integrated with dynamic forms and submission tracking using React, Tailwind, and\nMongoDB.\nLed development of ”Flow State App”, a full-stack Pomodoro and meditation tool for children in Myanmar IDP camps; introduced task-linked focus cycles not supported by most productivity apps.",
+      "technologies": ["NextJS", "ReactJS", "Vercel", "MongoDB","Docker"]
     }
   ]
 }
