@@ -1,0 +1,12 @@
+{
+  "workExperience": [
+    {
+      "position": "Software Engineer (Volunteer)",
+      "company": "Democratic Burma",
+      "duration": "2024 - Present",
+      "location": "Washington DC",
+      "description": "Migrated the organization website from Webflow CRM to Next.js, reducing load time by 40% and improving maintainability.\nedesigned the whole UI for better accessibility and readability, increasing visitor engagement by 30%.\nBuilt a volunteer recruitment platform integrated with dynamic forms and submission tracking using React, Tailwind, and\nMongoDB.\nLed development of ”Flow State App”, a full-stack Pomodoro and meditation tool for children in Myanmar IDP camps; introduced task-linked focus cycles not supported by most productivity apps.",
+      "technologies": ["NextJS", "ReactJS", "Vercel", "MongoDB","Docker"]
+    }
+  ]
+}

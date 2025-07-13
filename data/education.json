@@ -1,0 +1,14 @@
+{
+  "education": [
+
+    {
+      "degree": "Master of Computer Science",
+      "school": "University of Colorado Boulder",
+      "duration": "2024-Present",
+      "location": "Boulder, Co",
+      "description": "Specialized in Artificial Intelligence and Machine Learning",
+      "gpa": "4.0 GPA",
+      "achievements": ["4.0 GPA <24/30 credits completed>"]
+    }
+  ]
+}

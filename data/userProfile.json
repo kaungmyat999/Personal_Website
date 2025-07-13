@@ -1,8 +1,8 @@
 {
-	"name":"Kaung Myat Kyaw",
-	"nickName":"George Kyaw",
-	"email":"kaungmyatcomputerscience@gmail.com",
-	"github":"https://github.com/kaungmyat999",
-	"linkedin":"www.linkedin.com/in/george-kyaw-472498298"
-	
+  "name": "Kaung Myat Kyaw",
+  "nickName": "George Kyaw",
+  "email": "kaungmyatcomputerscience@gmail.com",
+  "github": "https://github.com/kaungmyat999",
+  "linkedin": "https://www.linkedin.com/in/george-kyaw-472498298",
+  "about": "Hi, I’m Kaung Myat Kyaw, a Machine Learning Engineer with a strong foundation in building scalable, data-driven systems. I’m pursuing an M.S. in Computer Science at the University of Colorado Boulder (GPA: 4.0), where I focus on machine learning, deep learning, and big data systems.\n\nI’ve applied my skills across impactful projects—from deploying a lung cancer detection model with 99% accuracy to building the Flow State App, a productivity tool for students in Myanmar IDP camps. I also volunteer as a software engineer, improving platforms and tools that serve real-world communities.\n\nMy toolkit includes Python, PyTorch, TensorFlow, Hugging Face, AWS, and MLOps practices for production-ready ML solutions. I’m passionate about using AI to solve meaningful problems and enjoy working on teams that value innovation, performance, and social impact."
 }

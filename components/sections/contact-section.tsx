@@ -1,78 +1,91 @@
-import { Github, Linkedin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Mail, Github, Linkedin } from "lucide-react"
 import userProfile from "../../data/userProfile.json"
 import Link from "next/link"
 
 export function ContactSection() {
   return (
-    <section id="contact" className="bg-muted/50 py-16 md:py-24">
+    <section id="contact" className="py-16 md:py-24">
       <div className="container space-y-12">
         <div className="text-center space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold">Get In Touch</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or just want to say hello? Feel free to reach out!
+            I'm always open to discussing new opportunities, interesting projects, or just having a chat about
+            technology.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold">Contact Information</h3>
-            <p>Feel free to reach out to me through any of the following channels:</p>
-            <div className="space-y-4">
-              <Link className="flex items-center gap-3" href={"mailto:" + userProfile.email}>
-                <Mail className="h-5 w-5 text-primary" />
-                <span>{userProfile.email}</span>
-              </Link>
-              <Link className="flex items-center gap-3" href={userProfile.github}>
-                <Github className="h-5 w-5 text-primary" />
-                <span>{userProfile.github}</span>
-              </Link>
-              <Link className="flex items-center gap-3" href={"https://" + userProfile.linkedin}>
-                <Linkedin className="h-5 w-5 text-primary" />
-                <span>{userProfile.linkedin}</span>
-              </Link>
-            </div>
-          </div>
-          <div className="bg-background p-6 rounded-lg shadow-sm">
-            <form className="space-y-4">
-              <div className="grid gap-4">
-                <div className="grid gap-2">
-                  <label htmlFor="name" className="text-sm font-medium">
-                    Name
-                  </label>
-                  <input
-                    id="name"
-                    type="text"
-                    placeholder="Your name"
-                    className="w-full p-2 rounded-md border border-input bg-background"
-                  />
-                </div>
-                <div className="grid gap-2">
-                  <label htmlFor="email" className="text-sm font-medium">
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    placeholder="Your email"
-                    className="w-full p-2 rounded-md border border-input bg-background"
-                  />
-                </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
+          <Card className="w-full">
+            <CardHeader>
+              <CardTitle>Send me a message</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="grid sm:grid-cols-2 gap-4">
+                <Input placeholder="First name" />
+                <Input placeholder="Last name" />
               </div>
-              <div className="grid gap-2">
-                <label htmlFor="message" className="text-sm font-medium">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  placeholder="Your message"
-                  rows={4}
-                  className="w-full p-2 rounded-md border border-input bg-background resize-none"
-                ></textarea>
-              </div>
-              <Button type="submit" className="w-full">
-                Send Message
-              </Button>
-            </form>
+              <Input placeholder="Email" type="email" />
+              <Input placeholder="Subject" />
+              <Textarea placeholder="Your message" className="min-h-[120px]" />
+              <Button className="w-full">Send Message</Button>
+            </CardContent>
+          </Card>
+          <div className="space-y-3 lg:space-y-4">
+            <Card>
+              <CardContent className="p-3 lg:p-4">
+                <Link
+                  href={`mailto:${userProfile.email}`}
+                  className="flex items-center gap-4 hover:bg-accent/50 p-3 rounded-lg transition-colors"
+                >
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Mail className="h-5 w-5 text-primary" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="font-medium">Email</p>
+                    <p className="text-muted-foreground text-sm truncate">{userProfile.email}</p>
+                  </div>
+                </Link>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-3 lg:p-4">
+                <Link
+                  href={userProfile.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 hover:bg-accent/50 p-3 rounded-lg transition-colors"
+                >
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Github className="h-5 w-5 text-primary" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="font-medium">GitHub</p>
+                    <p className="text-muted-foreground text-sm truncate">{userProfile.github}</p>
+                  </div>
+                </Link>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-3 lg:p-4">
+                <Link
+                  href={userProfile.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 hover:bg-accent/50 p-3 rounded-lg transition-colors"
+                >
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Linkedin className="h-5 w-5 text-primary" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="font-medium">LinkedIn</p>
+                    <p className="text-muted-foreground text-sm truncate">{userProfile.linkedin}</p>
+                  </div>
+                </Link>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
