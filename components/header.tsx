@@ -23,6 +23,10 @@ export function Header() {
           <Link href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
             Contact
           </Link>
+          <a href="/Kaung_Myat_Kyaw_Resume.pdf" className="text-muted-foreground hover:text-foreground transition-colors" download>
+            
+            Resume
+          </a>
         </nav>
         <div className="flex items-center gap-2">
           <ThemeToggle />
