@@ -36,7 +36,7 @@ export function ProjectsSection() {
               <div className="p-4">
                 <h3 className="font-bold text-xl">{project.name}</h3>
                 <p className="text-muted-foreground mt-2">
-                  A brief description of this project and the technologies used to build it.
+                  {project.description}
                 </p>
                 <div className="flex gap-2 mt-4 flex-wrap">
                   {project.stack &&

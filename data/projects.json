@@ -1,19 +1,28 @@
 {
     "projects":[
+        {"name":"Flow State App",
+        "link": "https://flow-state-app.vercel.app/",
+        "description":"Designed and deployed a full-stack productivity app combining Pomodoro timer, meditation, and task-linked focus cycles, tailored for displaced students in Myanmar IDP Refugee camps. Used static generation and cloud deployment with CI/CD via GitHub and Vercel. Supported 100+ users; aimed to enhance focus, engagement, and mental health using behavioral reinforcement loops.",
+        "stack":["NextJS", "ReactJS", "Vercel", "MongoDB"]},
+
         {"name":"Customer Segmentation with Unsupervised Learning",
         "link":"https://github.com/kaungmyat999/Unsupervised_Clustering_Customer_Segmentation",
+        "description":"Segmented customers in an online retail dataset using K-Means and Hierarchical Clustering; applied EDA, outlier detection, transformation, and standardization; tuned hyperparameters using Elbow and Silhouette methods to identify meaningful clusters for business insights. Engineered features and removed outliers to boost cluster interpretability by 50%",
         "stack":["Python", "scikit-learn", "Matplotlib", "Seaborn"]},
 
         {"name":"Lung Cancer Detection (CT Image-Based)",
         "link": "https://github.com/kaungmyat999/LUNG_CANCER_DETECTION",
+        "description":"Trained multiple supervised models on lung CT scan data to assist physicians in early cancer detection. Achieved 99% accuracy with SVM; documented full model evaluation in published report. Compared models using ROC and precision-recall; aimed to reduce clinical turnaround time",
         "stack":["SVM", "ANN", "Random Forest", "scikit-learn", "Kaggle"]},
-
-        {"name":"Personal Portfolio Project",
-        "link": "https://github.com/kaungmyat999/Personal_Website/tree/main",
-        "stack":["Next.js", "React.js", "Vercel", "CI/CD"]},
 
         {"name":"BBC News Classifier with Supervised and Unsupervised Models",
         "link": "http://github.com/kaungmyat999/BBC_News_Classifier",
-        "stack":["Python", "SVC", "K-Means", "NMF"]}
+        "description":"Built a news classification system trained on the BBC dataset using both supervised (SVC: 98.5% accuracy) and unsupervised (NMF: 95.5% accuracy) methods. Preprocessed and vectorized news articles to categorize into business, politics, tech, and sports.",
+        "stack":["Python", "SVC", "K-Means", "NMF"]},
+
+        {"name":"Personal Portfolio Website",
+        "link": "https://github.com/kaungmyat999/Personal_Website/tree/main",
+        "description":"Built and deployed a fully static, SEO-optimized developer portfolio site with custom project showcase and continuous deployment.",
+        "stack":["Next.js", "React.js", "Vercel", "CI/CD"]}
     ]
 }
