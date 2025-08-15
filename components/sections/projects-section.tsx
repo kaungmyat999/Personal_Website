@@ -20,7 +20,8 @@ export function ProjectsSection() {
                     <h4 className="text-lg font-semibold">{project.name}</h4>
                   </div>
                 </div>
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                {project.link && (
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <Button
                     variant="default"
                     size="sm"
@@ -32,6 +33,9 @@ export function ProjectsSection() {
                     </a>
                   </Button>
                 </div>
+                )
+              }
+                
               </div>
               <div className="p-4">
                 <h3 className="font-bold text-xl">{project.name}</h3>

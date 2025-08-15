@@ -1,9 +1,15 @@
 {
     "projects":[
         {"name":"Flow State App",
-        "link": "https://flow-state-app.vercel.app/",
         "description":"Designed and deployed a full-stack productivity app combining Pomodoro timer, meditation, and task-linked focus cycles, tailored for displaced students in Myanmar IDP Refugee camps. Used static generation and cloud deployment with CI/CD via GitHub and Vercel. Supported 100+ users; aimed to enhance focus, engagement, and mental health using behavioral reinforcement loops.",
-        "stack":["NextJS", "ReactJS", "Vercel", "MongoDB"]},
+        "stack":["NextJS", "ReactJS", "Vercel", "MongoDB"]
+        },
+        
+        {
+        "name": "Retrieval-Augmented Generation for AWS Exam Q&A",
+        "description": "Built a RAG-based system for AWS certification exam questions that eliminated the need for costly fine-tuning on extensive documentation. By creating a dataset with LLMs from presentation slides, the system avoided retraining with documentation updates. This solution improved performance by 24%, achieving a higher accuracy than fine-tuned Gemma3 models.",
+        "stack": ["LangChain", "HuggingFaceEmbeddings", "ChromaDB", "LLaMA 4"]
+        },
 
         {"name":"Customer Segmentation with Unsupervised Learning",
         "link":"https://github.com/kaungmyat999/Unsupervised_Clustering_Customer_Segmentation",
