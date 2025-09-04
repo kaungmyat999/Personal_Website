@@ -1,12 +1,20 @@
 {
   "workExperience": [
     {
-      "position": "Software Engineer (Volunteer)",
-      "company": "Democratic Burma",
-      "duration": "2024 - Present",
-      "location": "Washington DC",
-      "description": "Migrated the organization website from Webflow CRM to Next.js, reducing load time by 40% and improving maintainability.\nedesigned the whole UI for better accessibility and readability, increasing visitor engagement by 30%.\nBuilt a volunteer recruitment platform integrated with dynamic forms and submission tracking using React, Tailwind, and\nMongoDB.\nLed development of ”Flow State App”, a full-stack Pomodoro and meditation tool for children in Myanmar IDP camps; introduced task-linked focus cycles not supported by most productivity apps.",
-      "technologies": ["NextJS", "ReactJS", "Vercel", "MongoDB","Docker"]
+      "position": "Software Engineer, ML",
+      "company": "ConqTech Solution ",
+      "duration": "Jan 2024 - Sep 2025",
+      "location": "Remote",
+      "description": "Cut release cycles by 30% with CI/CD pipelines (GitHub Actions, Docker) for ML on AWS SageMaker; improved code quality via agile practices; built full-stack apps (React, Next.js, Node.js) for 3K+ users.",
+      "technologies": ["GitHub Actions", "Docker", "AWS SageMaker", "React", "Next.js", "Node.js", "Python", "R", "Agile"]
+    },
+    {
+      "position": "Machine Learning Engineer Intern",
+      "company": "ConqTech Solution ",
+      "duration": "Aug 2023 - Dec 2023",
+      "location": "Remote",
+      "description": "Enhanced ML features in Python, Scala, and MATLAB; boosted team efficiency through agile sprint planning and code reviews; delivered scalable apps for 3K+ users with React, Next.js, Node.js, and Python/R integration.",
+      "technologies": ["Python", "Scala", "MATLAB", "React", "Next.js", "Node.js", "R", "Agile", "Sprint Planning"]
     }
   ]
 }
