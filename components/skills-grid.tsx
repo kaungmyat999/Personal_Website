@@ -14,6 +14,16 @@ interface SkillCategory {
 
 const skillCategories: SkillCategory[] = [
   {
+    name: "Frontend Development",
+    icon: <Code2 className="h-5 w-5" />,
+    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "Material UI", "Framer Motion", "Vue.js"],
+  },
+  {
+    name: "Backend Development",
+    icon: <Terminal className="h-5 w-5" />,
+    skills: ["Node.js", "Express", "Django", "FastAPI", "PostgreSQL", "MongoDB", "GraphQL", "REST APIs"],
+  },
+  {
     name: "Machine Learning",
     icon: <Brain className="h-5 w-5" />,
     skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "OpenCV", "Keras", "NLTK"],
@@ -22,16 +32,6 @@ const skillCategories: SkillCategory[] = [
     name: "Cloud & MLOps",
     icon: <Cloud className="h-5 w-5" />,
     skills: ["AWS SageMaker", "Docker", "Kubernetes", "MLflow", "DVC", "Kubeflow", "Jenkins", "GitLab CI"],
-  },
-  {
-    name: "Backend Development",
-    icon: <Terminal className="h-5 w-5" />,
-    skills: ["Node.js", "Express", "Django", "FastAPI", "PostgreSQL", "MongoDB", "GraphQL", "REST APIs"],
-  },
-  {
-    name: "Frontend Development",
-    icon: <Code2 className="h-5 w-5" />,
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "Material UI", "Framer Motion", "Vue.js"],
   },
 ]
 

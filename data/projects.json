@@ -14,7 +14,11 @@
         "description":"This project showcases a microservices-based backend architecture for a simple movie-rating application similar to IMDB. Each microservice runs independently and communicates via REST using Eureka for service discovery.",
         "stack":["Java", "Spring", "MicroService", "CI/CD"]},
 
-        
+        {"name":"Tiny LRU Cache",
+        "link": "https://github.com/kaungmyat999/Tiny_LRU_Cache",
+        "description":"About LRU Cache implemented using Object Oriented Principles (C++)",
+        "stack":["C++", "Object Oriented Principles"]},
+
         {"name":"Parking Management System",
         "link": "https://github.com/kaungmyat999/Parking_Management_System",
         "description":"The Parking Management System is a multi-floor parking management application designed to facilitate vehicle check-in and check-out, live occupancy tracking, role-based access, flexible slot assignment, and payment integration. This system aims to streamline parking operations and enhance user experience.",
