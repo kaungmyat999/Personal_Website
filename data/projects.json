@@ -4,12 +4,27 @@
         "description":"Designed and deployed a full-stack productivity app combining Pomodoro timer, meditation, and task-linked focus cycles, tailored for displaced students in Myanmar IDP Refugee camps. Used static generation and cloud deployment with CI/CD via GitHub and Vercel. Supported 100+ users; aimed to enhance focus, engagement, and mental health using behavioral reinforcement loops.",
         "stack":["NextJS", "ReactJS", "Vercel", "MongoDB"]
         },
+        {"name":"Personal Portfolio Website",
+        "link": "https://github.com/kaungmyat999/Personal_Website/tree/main",
+        "description":"Built and deployed a fully static, SEO-optimized developer portfolio site with custom project showcase and continuous deployment.",
+        "stack":["Next.js", "React.js", "Vercel", "CI/CD"]},
+
+        {"name":"Microservices — Movie Rating Application",
+        "link": "https://github.com/kaungmyat999/Movie_Rating_Microservices",
+        "description":"This project showcases a microservices-based backend architecture for a simple movie-rating application similar to IMDB. Each microservice runs independently and communicates via REST using Eureka for service discovery.",
+        "stack":["Java", "Spring", "MicroService", "CI/CD"]},
+
         
-        {
-        "name": "Retrieval-Augmented Generation for AWS Exam Q&A",
-        "description": "Built a RAG-based system for AWS certification exam questions that eliminated the need for costly fine-tuning on extensive documentation. By creating a dataset with LLMs from presentation slides, the system avoided retraining with documentation updates. This solution improved performance by 24%, achieving a higher accuracy than fine-tuned Gemma3 models.",
-        "stack": ["LangChain", "HuggingFaceEmbeddings", "ChromaDB", "LLaMA 4"]
-        },
+        {"name":"Parking Management System",
+        "link": "https://github.com/kaungmyat999/Parking_Management_System",
+        "description":"The Parking Management System is a multi-floor parking management application designed to facilitate vehicle check-in and check-out, live occupancy tracking, role-based access, flexible slot assignment, and payment integration. This system aims to streamline parking operations and enhance user experience.",
+        "stack":["JavaScript", "Object Oriented Principles"]},
+
+        
+        {"name":"MCP_Server",
+        "link": "https://github.com/kaungmyat999/MCP_Server",
+        "description":"This project demonstrates a multi-container Model Context Protocol (MCP) system consisting of two independent microservices: Golang MCP Server → provides Mathematical Tooling; Python MCP Server → provides Web Search Tooling; Python Client → interacts with both servers through Docker’s internal network",
+        "stack":["Golang", "Python", "Docker"]},
 
         {"name":"Customer Segmentation with Unsupervised Learning",
         "link":"https://github.com/kaungmyat999/Unsupervised_Clustering_Customer_Segmentation",
@@ -26,9 +41,12 @@
         "description":"Built a news classification system trained on the BBC dataset using both supervised (SVC: 98.5% accuracy) and unsupervised (NMF: 95.5% accuracy) methods. Preprocessed and vectorized news articles to categorize into business, politics, tech, and sports.",
         "stack":["Python", "SVC", "K-Means", "NMF"]},
 
-        {"name":"Personal Portfolio Website",
-        "link": "https://github.com/kaungmyat999/Personal_Website/tree/main",
-        "description":"Built and deployed a fully static, SEO-optimized developer portfolio site with custom project showcase and continuous deployment.",
-        "stack":["Next.js", "React.js", "Vercel", "CI/CD"]}
+        {
+        "name": "Retrieval-Augmented Generation for AWS Exam Q&A",
+        "description": "Built a RAG-based system for AWS certification exam questions that eliminated the need for costly fine-tuning on extensive documentation. By creating a dataset with LLMs from presentation slides, the system avoided retraining with documentation updates. This solution improved performance by 24%, achieving a higher accuracy than fine-tuned Gemma3 models.",
+        "stack": ["LangChain", "HuggingFaceEmbeddings", "ChromaDB", "LLaMA 4"]
+        }
+
+        
     ]
 }

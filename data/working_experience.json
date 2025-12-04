@@ -1,11 +1,18 @@
 {
   "workExperience": [
     {
+      "position":"Software Engineer, AI Agentic",
+      "company": "Kashmir World Foundation",
+      "location": "McLean, VA",
+      "description": "Created Backend APIs for MCP Servers",
+      "technologies" :["SQL","NoSQL","Python","Go/Golang","MongoDB","GIT","Agile"]
+    },
+    {
       "position":"Software Engineer, ML",
       "company": "Democratic Burma",
       "location": "Remote",
-      "description": "Developed Website and an App called Flow State for student in Myanmar IDP campus.",
-      "technologies" :["React","Node.js","Python","AWS"]
+      "description": "Developed Website and an App called Flow State",
+      "technologies" :["React","NextJS","Node.js","Java","GraphQL","gRPC","AWS"]
     }
   ]
 }
