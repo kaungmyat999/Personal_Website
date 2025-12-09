@@ -14,6 +14,12 @@
         "description":"This project showcases a microservices-based backend architecture for a simple movie-rating application similar to IMDB. Each microservice runs independently and communicates via REST using Eureka for service discovery.",
         "stack":["Java", "Spring", "MicroService", "CI/CD"]},
 
+        {"name":"Cinema Ticket Management System",
+        "link": "https://github.com/kaungmyat999/Cinema-Ticket-Management-System",
+        "description":"Movie Booking System built with ASP.NET Core MVC and MS SQL Server.About
+Movie Booking System built with ASP.NET Core MVC and MS SQL Server. It manages movie screenings and ticket reservations, offering distinct features for Members, Content Admins, and System Admins.",
+        "stack":["ASP.Net", "MVC", "MSSQL", "Visual Studio Code"]},
+
         {"name":"Tiny LRU Cache",
         "link": "https://github.com/kaungmyat999/Tiny_LRU_Cache",
         "description":"About LRU Cache implemented using Object Oriented Principles (C++)",
