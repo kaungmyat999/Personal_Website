@@ -20,10 +20,14 @@
         "provider":"Microsoft",
         "path": "https://learn.microsoft.com/api/achievements/share/en-us/KaungMyat-8030/NMEADQHF?sharingId=E4F54E266AB72547",
     
+      },
+      {
+        "name": "Understand ASP.NET Core fundamentals",
+        "provider":"Microsoft",
+        "path": "https://learn.microsoft.com/api/achievements/share/en-us/KaungMyat-8030/NME7T8ZF?sharingId=E4F54E266AB72547",
+    
       }
-
-      
-      
+  
       
     ]
   }
