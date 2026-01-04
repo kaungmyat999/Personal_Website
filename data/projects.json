@@ -1,6 +1,25 @@
 {
     "projects":[
+        {
+            "name": "Plant Shop",
+            "link": "https://github.com/kaungmyat999/Plant_Shop",
+            "description": "A modern, responsive React-based e-commerce platform for plant enthusiasts. Features a curated plant catalog, dynamic shopping cart management, and seamless state handling with Tailwind and Redux.",
+            "stack": ["React","Vite","Tailwind","SaSS","Redux"]
+        },
+        {
+            "name":"Ledger",
+            "link":"https://github.com/kaungmyat999/Ledger",
+            "description":"💰 A modern, full-stack personal finance tracker built with Next.js and Clerk. Effortlessly manage accounts, track daily expenses by category, and visualize your financial health through an intuitive dashboard.",
+            "stack":["Next/ReactJs","Tailwind","Prisma+PostgreSQL","HTML","CSS"]
+        },
+        {
+            "name":"Retrieval-Augmented-Generation-RAG",
+            "link":"https://github.com/kaungmyat999/Retrieval-Augmented-Generation-RAG-",
+            "description":"A containerized Streamlit application that uses a FAISS-backed Retrieval Augmented Generation LLM to answer questions from uploaded Markdown files, deployed on Google Cloud Platform.",
+            "stack":["Docker","OpenAI","Streamlit","Numpy","Pandas"]
+        },
         {"name":"Flow State App",
+        "link":"https://v0-fork-of-promodoro-web-app.vercel.app/",
         "description":"Designed and deployed a full-stack productivity app combining Pomodoro timer, meditation, and task-linked focus cycles, tailored for displaced students in Myanmar IDP Refugee camps. Used static generation and cloud deployment with CI/CD via GitHub and Vercel. Supported 100+ users; aimed to enhance focus, engagement, and mental health using behavioral reinforcement loops.",
         "stack":["NextJS", "ReactJS", "Vercel", "MongoDB"]
         },
