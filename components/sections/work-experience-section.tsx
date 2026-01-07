@@ -4,6 +4,7 @@ import { Calendar, MapPin } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import workExperienceData from "../../data/working_experience.json"
+import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 /**
  * Vertical-timeline style work-experience section.
@@ -12,6 +13,9 @@ import workExperienceData from "../../data/working_experience.json"
  * • NO timeline dots (per latest request)
  */
 export function WorkExperienceSection() {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 })
+  const { ref: timelineRef, isVisible: timelineVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 })
+
   // Fallback in case the JSON shape changes
   const experiences =
     (workExperienceData as { workExperience?: any[]; experiences?: any[] }).workExperience ??
@@ -21,18 +25,40 @@ export function WorkExperienceSection() {
   return (
     <section id="experience" className="py-16 md:py-24 bg-muted/30">
       <div className="container space-y-12">
-        <div className="text-center space-y-4">
+        <div 
+          ref={headerRef}
+          className={`text-center space-y-4 transition-all duration-800 ${
+            headerVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-8'
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold">Work Experience</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">My professional journey and key accomplishments.</p>
         </div>
 
-        <div className="relative max-w-4xl mx-auto">
+        <div 
+          ref={timelineRef}
+          className={`relative max-w-4xl mx-auto transition-all duration-1000 ${
+            timelineVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-12'
+          }`}
+        >
           {/* Glowing gradient vertical bar */}
           <div className="pointer-events-none absolute left-4 md:left-8 top-0 bottom-0 w-1 rounded-full bg-gradient-to-b from-primary via-primary/60 to-primary/20 shadow-lg shadow-primary/50" />
 
           <div className="space-y-10">
             {experiences.map((job, index) => (
-              <div key={index} className="relative pl-12 md:pl-20">
+              <div 
+                key={index} 
+                className={`relative pl-12 md:pl-20 transition-all duration-700 ${
+                  timelineVisible 
+                    ? 'opacity-100 translate-x-0' 
+                    : 'opacity-0 translate-x-8'
+                }`}
+                style={{ transitionDelay: `${index * 150}ms` }}
+              >
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">

@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -5,12 +7,24 @@ import { Textarea } from "@/components/ui/textarea"
 import { Mail, Github, Linkedin } from "lucide-react"
 import userProfile from "../../data/userProfile.json"
 import Link from "next/link"
+import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 export function ContactSection() {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 })
+  const { ref: formRef, isVisible: formVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 })
+  const { ref: contactRef, isVisible: contactVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 })
+
   return (
     <section id="contact" className="py-16 md:py-24">
       <div className="container space-y-12">
-        <div className="text-center space-y-4">
+        <div 
+          ref={headerRef}
+          className={`text-center space-y-4 transition-all duration-800 ${
+            headerVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-8'
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold">Get In Touch</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             I'm always open to discussing new opportunities, interesting projects, or just having a chat about
@@ -18,22 +32,38 @@ export function ContactSection() {
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
-          <Card className="w-full">
-            <CardHeader>
-              <CardTitle>Send me a message</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <Input placeholder="First name" />
-                <Input placeholder="Last name" />
-              </div>
-              <Input placeholder="Email" type="email" />
-              <Input placeholder="Subject" />
-              <Textarea placeholder="Your message" className="min-h-[120px]" />
-              <Button className="w-full">Send Message</Button>
-            </CardContent>
-          </Card>
-          <div className="space-y-3 lg:space-y-4">
+          <div 
+            ref={formRef}
+            className={`transition-all duration-800 delay-100 ${
+              formVisible 
+                ? 'opacity-100 translate-x-0' 
+                : 'opacity-0 -translate-x-8'
+            }`}
+          >
+            <Card className="w-full">
+              <CardHeader>
+                <CardTitle>Send me a message</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <Input placeholder="First name" />
+                  <Input placeholder="Last name" />
+                </div>
+                <Input placeholder="Email" type="email" />
+                <Input placeholder="Subject" />
+                <Textarea placeholder="Your message" className="min-h-[120px]" />
+                <Button className="w-full">Send Message</Button>
+              </CardContent>
+            </Card>
+          </div>
+          <div 
+            ref={contactRef}
+            className={`space-y-3 lg:space-y-4 transition-all duration-800 delay-200 ${
+              contactVisible 
+                ? 'opacity-100 translate-x-0' 
+                : 'opacity-0 translate-x-8'
+            }`}
+          >
             <Card>
               <CardContent className="p-3 lg:p-4">
                 <Link

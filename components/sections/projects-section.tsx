@@ -1,19 +1,47 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import projectsData from "../../data/projects.json"
+import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 export function ProjectsSection() {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 })
+  const { ref: projectsRef, isVisible: projectsVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 })
+
   return (
     <section id="projects" className="py-16 md:py-24 bg-muted/30">
       <div className="container space-y-12">
-        <div className="text-center space-y-4">
+        <div 
+          ref={headerRef}
+          className={`text-center space-y-4 transition-all duration-3000 ${
+            headerVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-8'
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold">Featured Projects</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             A showcase of my recent work and personal projects that demonstrate my skills and creativity.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div 
+          ref={projectsRef}
+          className={`grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto transition-all duration-3000 ${
+            projectsVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-12'
+          }`}
+        >
           {projectsData.projects.map((project, index) => (
-            <div key={index} className="border rounded-lg overflow-hidden group">
+            <div 
+              key={index} 
+              className={`border rounded-lg overflow-hidden group transition-all duration-2000 ${
+                projectsVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: `${index * 200}ms` }}
+            >
               <div className="relative">
                 <div className="w-full h-48 bg-gradient-to-br from-primary/20 via-primary/10 to-background flex items-center justify-center">
                   <div className="text-center p-6">
@@ -34,8 +62,8 @@ export function ProjectsSection() {
                   </Button>
                 </div>
                 )
-              }
-                
+                }
+                  
               </div>
               <div className="p-4">
                 <h3 className="font-bold text-xl">{project.name}</h3>
