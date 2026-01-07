@@ -151,19 +151,19 @@ export function HeroSection() {
       {/* Custom Cursor with Yellow Radiation */}
       {isHovered && (
         <div 
-          className="pointer-events-none fixed z-50 mix-blend-screen"
+          className="pointer-events-none fixed z-50"
           style={{ 
             left: ballPosition.x - 20, 
             top: ballPosition.y - 20
           }}
         >
           <div className="relative">
-            {/* Radiation glow effect */}
+            {/* Radiation glow effect - same yellow colors for both themes */}
             <div className="absolute inset-0 w-10 h-10 bg-yellow-400 rounded-full blur-md animate-pulse" />
             <div className="absolute top-[-2px] left-[-2px] w-14 h-14 bg-yellow-300 rounded-full blur-lg animate-ping" />
             <div className="absolute top-[-4px] left-[-4px] w-18 h-18 bg-yellow-200 rounded-full blur-xl animate-ping" style={{ animationDelay: '0.2s' }} />
             
-            {/* Core cursor */}
+            {/* Core cursor - yellow for both themes */}
             <div className="absolute top-[8px] left-[8px] w-4 h-4 bg-yellow-400 rounded-full shadow-lg shadow-yellow-400/50">
               <div className="absolute inset-0 bg-yellow-300 rounded-full animate-pulse" />
             </div>

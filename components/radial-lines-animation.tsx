@@ -24,11 +24,16 @@ export default function RadialLinesAnimation() {
     const resizeCanvas = () => {
       const { width, height } = canvas.getBoundingClientRect()
       const dpr = window.devicePixelRatio || 1
+      
+      // Set canvas size for proper rendering on high-DPI displays (macOS)
       canvas.width = width * dpr
       canvas.height = height * dpr
+      
+      // Scale context to match device pixel ratio
       ctx.scale(dpr, dpr)
-      ctx.setTransform(1, 0, 0, 1, 0, 0)
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      
+      // Clear the entire canvas area
+      ctx.clearRect(0, 0, width, height)
     }
 
     resizeCanvas()
@@ -48,9 +53,9 @@ export default function RadialLinesAnimation() {
       const { width, height } = canvas.getBoundingClientRect()
       const centerX = width / 2
       const centerY = height / 2
-      const maxRadius = Math.min(width, height) * 0.45
+      const maxRadius = Math.min(width, height) * 0.35
 
-      // Clear canvas
+      // Clear canvas with proper dimensions
       ctx.clearRect(0, 0, width, height)
 
       // Update and draw each circle
@@ -112,6 +117,11 @@ export default function RadialLinesAnimation() {
     <canvas
       ref={canvasRef}
       className="w-full h-full rounded-lg block mx-auto"
+      style={{ 
+        width: '100%', 
+        height: '100%',
+        display: 'block'
+      }}
       aria-label="Animated radial lines forming breathing circles"
     />
   )

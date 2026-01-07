@@ -26,7 +26,7 @@ export function AboutSection() {
         <div className="grid md:grid-cols-2 gap-8 items-start">
           <div 
             ref={animationRef}
-            className={`aspect-square w-full max-w-[500px] mx-auto hidden md:block transition-all duration-4000 delay-300 ${
+            className={`aspect-square w-full max-w-[400px] mx-auto hidden md:block transition-all duration-4000 delay-300 ${
               animationVisible 
                 ? 'opacity-100 scale-100' 
                 : 'opacity-0 scale-95'
@@ -43,7 +43,7 @@ export function AboutSection() {
             }`}
           >
             <div className="prose prose-gray dark:prose-invert max-w-none">
-              <p className="text-lg leading-relaxed whitespace-pre-line">{userProfile.about}</p>
+              <p className="text-lg leading-[2.2] whitespace-pre-line">{userProfile.about}</p>
             </div>
           </div>
         </div>
