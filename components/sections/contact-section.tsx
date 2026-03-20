@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Github, Linkedin, Send } from "lucide-react"
+import { Mail, Github, Send } from "lucide-react" /* Linkedin */
 import userProfile from "../../data/userProfile.json"
 import Link from "next/link"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
@@ -75,13 +75,12 @@ export function ContactSection() {
   return (
     <section id="contact" className="py-16 md:py-24">
       <div className="container space-y-12">
-        <div 
+        <div
           ref={headerRef}
-          className={`text-center space-y-4 transition-all duration-800 ${
-            headerVisible 
-              ? 'opacity-100 translate-y-0' 
-              : 'opacity-0 translate-y-8'
-          }`}
+          className={`text-center space-y-4 transition-all duration-800 ${headerVisible
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-8'
+            }`}
         >
           <h2 className="text-3xl md:text-4xl font-bold">Get In Touch</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -90,13 +89,12 @@ export function ContactSection() {
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
-          <div 
+          <div
             ref={formRef}
-            className={`transition-all duration-800 delay-100 ${
-              formVisible 
-                ? 'opacity-100 translate-x-0' 
-                : 'opacity-0 -translate-x-8'
-            }`}
+            className={`transition-all duration-800 delay-100 ${formVisible
+              ? 'opacity-100 translate-x-0'
+              : 'opacity-0 -translate-x-8'
+              }`}
           >
             <Card className="w-full">
               <CardHeader>
@@ -105,40 +103,40 @@ export function ContactSection() {
               <CardContent className="space-y-4">
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid sm:grid-cols-2 gap-4">
-                    <Input 
+                    <Input
                       name="firstName"
-                      placeholder="First name" 
+                      placeholder="First name"
                       value={formData.firstName}
                       onChange={handleInputChange}
                       required
                     />
-                    <Input 
+                    <Input
                       name="lastName"
-                      placeholder="Last name" 
+                      placeholder="Last name"
                       value={formData.lastName}
                       onChange={handleInputChange}
                       required
                     />
                   </div>
-                  <Input 
+                  <Input
                     name="email"
-                    placeholder="Email" 
-                    type="email" 
+                    placeholder="Email"
+                    type="email"
                     value={formData.email}
                     onChange={handleInputChange}
                     required
                   />
-                  <Input 
+                  <Input
                     name="subject"
-                    placeholder="Subject" 
+                    placeholder="Subject"
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
                   />
-                  <Textarea 
+                  <Textarea
                     name="message"
-                    placeholder="Your message" 
-                    className="min-h-[120px]" 
+                    placeholder="Your message"
+                    className="min-h-[120px]"
                     value={formData.message}
                     onChange={handleInputChange}
                     required
@@ -175,13 +173,12 @@ export function ContactSection() {
               </CardContent>
             </Card>
           </div>
-          <div 
+          <div
             ref={contactRef}
-            className={`space-y-3 lg:space-y-4 transition-all duration-800 delay-200 ${
-              contactVisible 
-                ? 'opacity-100 translate-x-0' 
-                : 'opacity-0 translate-x-8'
-            }`}
+            className={`space-y-3 lg:space-y-4 transition-all duration-800 delay-200 ${contactVisible
+              ? 'opacity-100 translate-x-0'
+              : 'opacity-0 translate-x-8'
+              }`}
           >
             <Card>
               <CardContent className="p-3 lg:p-4">
@@ -217,7 +214,7 @@ export function ContactSection() {
                 </Link>
               </CardContent>
             </Card>
-            <Card>
+            {/* <Card>
               <CardContent className="p-3 lg:p-4">
                 <Link
                   href={userProfile.linkedin}
@@ -234,7 +231,7 @@ export function ContactSection() {
                   </div>
                 </Link>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
         </div>
       </div>
