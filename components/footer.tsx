@@ -4,7 +4,7 @@ import userProfile from '../data/userProfile.json'
 export function Footer() {
   return (
     <footer className="border-t py-8">
-      <div className="container flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="container flex flex-col justify-center items-center gap-4 text-center">
         <div>
           <p className="text-muted-foreground">© {new Date().getFullYear()} {userProfile.name}. All rights reserved.</p>
         </div>
